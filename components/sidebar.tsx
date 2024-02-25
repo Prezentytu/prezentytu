@@ -1,9 +1,8 @@
-import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
 
 export function Sidebar() {
   return (
-    <div className='w-1/5 pb-12'>
+    <div className=' w-1/5 pb-12 max-lg:hidden'>
       <div className='space-y-4 py-4'>
         <div className='px-3 py-2'>
           <h2 className='mb-2 px-4 text-lg font-semibold tracking-tight'>

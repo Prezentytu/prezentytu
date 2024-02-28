@@ -8,8 +8,8 @@ import { Topbar } from '@/components/topbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Prezentytu',
-  description: 'App for managing presents'
+  title: 'Listeo',
+  description: 'Aplikacja do zarządzania listami prezentów'
 }
 
 export default function RootLayout({

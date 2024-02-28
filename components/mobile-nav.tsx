@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils'
 import { Sheet, SheetTrigger, SheetContent } from './ui/sheet'
 import { Button } from './ui/button'
 import { ScrollArea } from './ui/scroll-area'
-import { ModeToggle } from './theme-toggle'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
 
@@ -15,8 +14,8 @@ const sidebarNavConfig = [
   {
     title: 'Lista',
     items: [
-      { title: 'Dodaj listę', href: '/add-list' },
-      { title: 'Zarządzaj listami', href: '/manage-lists' }
+      { title: 'Dodaj listę', href: '/dashboard/add-list' },
+      { title: 'Zarządzaj listami', href: '/dashboard/manage-lists' }
     ]
   }
 ]
@@ -93,7 +92,7 @@ export function MobileNav() {
               <div className='flex items-center justify-center space-x-2'>
                 <Sun className='h-6 w-6 dark:hidden' />
                 <Moon className='hidden h-6 w-6 dark:block' />
-                <span>Toggle Theme</span>
+                <span>Zmień motyw</span>
               </div>
             </Button>
           </div>

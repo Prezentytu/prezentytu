@@ -4,6 +4,7 @@ import './globals.css'
 import { Sidebar } from '@/components/sidebar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Topbar } from '@/components/topbar'
+import ConvexClientProvider from './ConvexClientProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,18 +21,20 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Topbar />
-          <div className='flex'>
-            <Sidebar />
-            <div className='w-full px-4 py-2'>{children}</div>
-          </div>
-        </ThemeProvider>
+        <ConvexClientProvider>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Topbar />
+            <div className='flex'>
+              <Sidebar />
+              <div className='w-full px-4 py-2'>{children}</div>
+            </div>
+          </ThemeProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   )

@@ -5,6 +5,7 @@ import { Sidebar } from '@/components/sidebar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Topbar } from '@/components/topbar'
 import ConvexClientProvider from './ConvexClientProvider'
+import { Footer } from '@/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,7 @@ export default function RootLayout({
               <Sidebar />
               <div className='w-full px-4 py-2'>{children}</div>
             </div>
+            <Footer />
           </ThemeProvider>
         </ConvexClientProvider>
       </body>

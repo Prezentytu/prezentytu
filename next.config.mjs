@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import pkg from './package.json' assert { type: 'json' }
 
-export default nextConfig;
+const version = pkg.version
+
+const nextConfig = {
+  publicRuntimeConfig: {
+    version
+  }
+}
+
+export default nextConfig

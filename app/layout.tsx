@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Sidebar } from '@/components/sidebar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Topbar } from '@/components/topbar'
 import ConvexClientProvider from './ConvexClientProvider'
@@ -31,7 +30,6 @@ export default function RootLayout({
           >
             <Topbar />
             <div className='flex'>
-              <Sidebar />
               <div className='w-full px-4 py-2'>{children}</div>
             </div>
             <Footer />
